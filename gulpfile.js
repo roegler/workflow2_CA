@@ -1,5 +1,6 @@
-function defaultTask (cb) {
-    cb()
-}
+const { src, dest } = require('gulp');
 
-exports.default = defaultTask
+exports.default = function() {
+  return src('src/*.html')
+    .pipe(dest('dist/'));
+}
